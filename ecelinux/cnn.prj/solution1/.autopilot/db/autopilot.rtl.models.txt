@@ -1,0 +1,12 @@
+dut_fadd_32ns_32ns_32_5_full_dsp
+dut_fmul_32ns_32ns_32_4_max_dsp
+dut_fcmp_32ns_32ns_1_1
+dut_uitofp_32ns_32_6
+dut_w_conv1
+dut_b_conv1
+dut_w_conv2
+dut_b_conv2
+dut_mem_conv1
+dut_output_V_assign
+dut_perform_conv
+dut
