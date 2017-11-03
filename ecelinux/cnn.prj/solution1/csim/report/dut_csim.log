@@ -186,5 +186,5 @@ make[1]: Leaving directory `/home/clc288/lab4/ecelinux/cnn.prj/solution1/csim/bu
 #180: 	TestInstance=0x31e6cf8c00 	Interpreted=0 	Expected=0
 Number of test instances = 180
 Overall Error Rate = 5%
-digitrec sw         :      1 calls; 208.736 msecs total time
+digitrec sw         :      1 calls; 304.564 msecs total time
 INFO: [SIM 1] CSim done with 0 errors.

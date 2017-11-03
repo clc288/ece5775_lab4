@@ -44,21 +44,32 @@ void cnn_xcel( digit input , bit32_t* output)
 {
   #include "model_conv.h"
 
-  float mem_conv1[800];
-  float mem_conv2[800];
-
+  fixed16_t mem_conv1[800];
+  fixed16_t mem_conv2[800];
+	//fixed16_t layer1_in[800];
+	//fixed16_t layer1_out[800];
+	
+	//fixed16_t layer2_out[576];
+	
   // prepare input fmaps
+  //for (int i = 0; i < 49; i++) layer1_in[i] = input[i];
   for (int i = 0; i < 49; i++) mem_conv1[i] = input[i];
 
   // first conv layer
-  perform_conv(mem_conv1, mem_conv2, w_conv1, b_conv1, 1, 32, 5);
+  //perform_conv1(layer1_in, layer1_out, w_conv1, b_conv1);
   // second conv layer
-  perform_conv(mem_conv2, mem_conv1, w_conv2, b_conv2, 32, 64, 3);
+  //perform_conv2(layer1_out, layer2_out, w_conv2, b_conv2);
+
+	//first conv layer
+	perform_conv(mem_conv1, mem_conv2, w_conv1, b_conv1, 1, 32, 5);
+	// second conv layer
+	perform_conv(mem_conv2, mem_conv1, w_conv2, b_conv2, 32, 64, 3);
 
   // prepare outputs
   union_f_i val;
 
   for (int i = 0; i < 576; i++) {
+    //val.f = layer2_out[i];
     val.f = mem_conv1[i];
     output[i] = (bit32_t)val.i;
   }

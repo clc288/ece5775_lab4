@@ -9,7 +9,7 @@
 (* rom_style = "block" *) module dut_b_conv1_rom (
 addr0, ce0, q0, clk);
 
-parameter DWIDTH = 32;
+parameter DWIDTH = 16;
 parameter AWIDTH = 6;
 parameter MEM_SIZE = 64;
 
@@ -47,7 +47,7 @@ module dut_b_conv1(
     ce0,
     q0);
 
-parameter DataWidth = 32'd32;
+parameter DataWidth = 32'd16;
 parameter AddressRange = 32'd64;
 parameter AddressWidth = 32'd6;
 input reset;

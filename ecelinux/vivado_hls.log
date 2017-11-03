@@ -5,7 +5,7 @@
   Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 ================================================================
 INFO: [HLS 200-10] Running '/opt/xilinx/xilinx_2016.2/Vivado_HLS/2016.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'clc288' on host 'en-ec-ecelinux-02.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-693.1.1.el7.x86_64) on Sat Oct 28 19:54:15 EDT 2017
+INFO: [HLS 200-10] For user 'clc288' on host 'en-ec-ecelinux-02.coecis.cornell.edu' (Linux_x86_64 version 3.10.0-693.1.1.el7.x86_64) on Thu Nov 02 22:43:42 EDT 2017
 INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.4 (Maipo)"
 INFO: [HLS 200-10] In directory '/home/clc288/lab4/ecelinux'
 INFO: [HLS 200-10] Opening and resetting project '/home/clc288/lab4/ecelinux/cnn.prj'.
@@ -205,27 +205,34 @@ make[1]: Leaving directory `/home/clc288/lab4/ecelinux/cnn.prj/solution1/csim/bu
 #180: 	TestInstance=0x31e6cf8c00 	Interpreted=0 	Expected=0
 Number of test instances = 180
 Overall Error Rate = 5%
-digitrec sw         :      1 calls; 208.736 msecs total time
+digitrec sw         :      1 calls; 304.564 msecs total time
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [HLS 200-10] Analyzing design file 'layer.cpp' ... 
 INFO: [HLS 200-10] Analyzing design file 'cnn.cpp' ... 
 INFO: [HLS 200-10] Validating synthesis directives ...
 INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<16, 2, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_float' into 'cnn_xcel' (cnn.cpp:73).
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'cnn_xcel' into 'dut' (cnn.cpp:30) automatically.
-WARNING: [SYNCHK 200-23] cnn.cpp:51: variable-indexed range selection may cause suboptimal QoR.
+WARNING: [SYNCHK 200-23] cnn.cpp:56: variable-indexed range selection may cause suboptimal QoR.
 INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (cnn.cpp:73:13) to (cnn.cpp:71:28) in function 'cnn_xcel'... converting 3 basic blocks.
 INFO: [XFORM 203-602] Inlining function 'cnn_xcel' into 'dut' (cnn.cpp:30) automatically.
 INFO: [XFORM 203-11] Balancing expressions in function 'perform_conv' (layer.cpp:22)...3 expression(s) balanced.
-INFO: [HLS 200-111] Elapsed time: 22.29 seconds; current memory usage: 95.8 MB.
+INFO: [HLS 200-111] Elapsed time: 91.15 seconds; current memory usage: 192 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'dut' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Scheduling module 'dut_perform_conv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.09ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'mul' operation ('p_Val2_4', layer.cpp:42) (3.36 ns)
+	'add' operation ('__Val2__', layer.cpp:42) (3.02 ns)
+	'partselect' operation ('tmp_21', layer.cpp:42) (0 ns)
+	'store' operation (layer.cpp:42) of variable 'tmp_21', layer.cpp:42 on array 'output_V' (2.71 ns)
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Elapsed time: 0.11 seconds; current memory usage: 96.9 MB.
+INFO: [HLS 200-111] Elapsed time: 0.11 seconds; current memory usage: 193 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut_perform_conv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -234,13 +241,13 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Elapsed time: 0.04 seconds; current memory usage: 97.6 MB.
+INFO: [HLS 200-111] Elapsed time: 0.05 seconds; current memory usage: 194 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Scheduling module 'dut' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Elapsed time: 0.13 seconds; current memory usage: 97.9 MB.
+INFO: [HLS 200-111] Elapsed time: 0.22 seconds; current memory usage: 194 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Exploring micro-architecture for module 'dut' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -249,24 +256,22 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Elapsed time: 0.03 seconds; current memory usage: 98.2 MB.
+INFO: [HLS 200-111] Elapsed time: 0.04 seconds; current memory usage: 195 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dut_perform_conv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'dut_fadd_32ns_32ns_32_5_full_dsp': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'dut_fcmp_32ns_32ns_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'dut_fmul_32ns_32ns_32_4_max_dsp': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dut_mac_muladd_16s_16s_30ns_30_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_perform_conv'.
-INFO: [HLS 200-111] Elapsed time: 0.09 seconds; current memory usage: 99.2 MB.
+INFO: [HLS 200-111] Elapsed time: 0.11 seconds; current memory usage: 195 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'dut' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_in_V_V' to 'ap_fifo'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'dut/strm_out_V_V' to 'ap_fifo'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
-INFO: [RTGEN 206-100] Generating core module 'dut_uitofp_32ns_32_6': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dut_sitofp_32s_32_6': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'dut'.
-INFO: [HLS 200-111] Elapsed time: 0.26 seconds; current memory usage: 103 MB.
+INFO: [HLS 200-111] Elapsed time: 0.37 seconds; current memory usage: 198 MB.
 WARNING: [RTMG 210-274] Memory 'dut_w_conv1' is read-only, switch it to a ROM.
 INFO: [RTMG 210-279] Implementing memory 'dut_w_conv1_rom' using block ROMs.
 WARNING: [RTMG 210-274] Memory 'dut_b_conv1' is read-only, switch it to a ROM.
@@ -275,10 +280,10 @@ WARNING: [RTMG 210-274] Memory 'dut_w_conv2' is read-only, switch it to a ROM.
 INFO: [RTMG 210-279] Implementing memory 'dut_w_conv2_rom' using block ROMs.
 WARNING: [RTMG 210-274] Memory 'dut_b_conv2' is read-only, switch it to a ROM.
 INFO: [RTMG 210-279] Implementing memory 'dut_b_conv2_rom' using block ROMs.
-INFO: [RTMG 210-278] Implementing memory 'dut_mem_conv1_ram' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'dut_mem_conv1_V_ram' using block RAMs.
 INFO: [RTMG 210-278] Implementing memory 'dut_output_V_assign_ram' using block RAMs.
 INFO: [HLS 200-10] Finished generating all RTL models.
 INFO: [SYSC 207-301] Generating SystemC RTL for dut.
 INFO: [VHDL 208-304] Generating VHDL RTL for dut.
 INFO: [VLOG 209-307] Generating Verilog RTL for dut.
-INFO: [HLS 200-112] Total elapsed time: 50.680 seconds; peak memory usage: 103 MB.
+INFO: [HLS 200-112] Total elapsed time: 199.907 seconds; peak memory usage: 198 MB.

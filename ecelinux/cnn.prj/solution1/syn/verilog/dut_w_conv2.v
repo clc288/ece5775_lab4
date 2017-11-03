@@ -9,7 +9,7 @@
 (* rom_style = "block" *) module dut_w_conv2_rom (
 addr0, ce0, q0, clk);
 
-parameter DWIDTH = 32;
+parameter DWIDTH = 16;
 parameter AWIDTH = 15;
 parameter MEM_SIZE = 18432;
 
@@ -47,7 +47,7 @@ module dut_w_conv2(
     ce0,
     q0);
 
-parameter DataWidth = 32'd32;
+parameter DataWidth = 32'd16;
 parameter AddressRange = 32'd18432;
 parameter AddressWidth = 32'd15;
 input reset;

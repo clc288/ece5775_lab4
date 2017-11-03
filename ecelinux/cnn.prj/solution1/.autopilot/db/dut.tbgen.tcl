@@ -51,50 +51,48 @@ set NewPortList {[
  	{ "name": "strm_out_V_V_write", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "strm_out_V_V", "role": "write" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "12"], "CDFG" : "dut", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
+	{"Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "10"], "CDFG" : "dut", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
 		"Port" : [
 		{"Name" : "strm_in_V_V", "Type" : "Fifo", "Direction" : "I", "BlockSignal" : [
 			{"Name" : "strm_in_V_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : []}, 
 		{"Name" : "strm_out_V_V", "Type" : "Fifo", "Direction" : "O", "BlockSignal" : [
 			{"Name" : "strm_out_V_V_blk_n", "Type" : "RtlSignal"}], "SubConnect" : []}, 
 		{"Name" : "w_conv1", "Type" : "Memory", "Direction" : "I", "BlockSignal" : [], "SubConnect" : [
-			{"SubInst" : "grp_dut_perform_conv_fu_168", "Port" : "weight"}]}, 
+			{"SubInst" : "grp_dut_perform_conv_fu_183", "Port" : "weight_V"}]}, 
 		{"Name" : "b_conv1", "Type" : "Memory", "Direction" : "I", "BlockSignal" : [], "SubConnect" : [
-			{"SubInst" : "grp_dut_perform_conv_fu_168", "Port" : "bias"}]}, 
+			{"SubInst" : "grp_dut_perform_conv_fu_183", "Port" : "bias_V"}]}, 
 		{"Name" : "w_conv2", "Type" : "Memory", "Direction" : "I", "BlockSignal" : [], "SubConnect" : [
-			{"SubInst" : "grp_dut_perform_conv_fu_168", "Port" : "weight"}]}, 
+			{"SubInst" : "grp_dut_perform_conv_fu_183", "Port" : "weight_V"}]}, 
 		{"Name" : "b_conv2", "Type" : "Memory", "Direction" : "I", "BlockSignal" : [], "SubConnect" : [
-			{"SubInst" : "grp_dut_perform_conv_fu_168", "Port" : "bias"}]}],
+			{"SubInst" : "grp_dut_perform_conv_fu_183", "Port" : "bias_V"}]}],
 		"WaitState" : [
-		{"State" : "ap_ST_st10_fsm_9", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_perform_conv_fu_168"},
-		{"State" : "ap_ST_st12_fsm_11", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_perform_conv_fu_168"}],
+		{"State" : "ap_ST_st4_fsm_3", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_perform_conv_fu_183"},
+		{"State" : "ap_ST_st6_fsm_5", "FSM" : "ap_CS_fsm", "SubInst" : "grp_dut_perform_conv_fu_183"}],
 		"SubBlockPort" : []},
 	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.w_conv1_U", "Parent" : "0", "Child" : []},
 	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.b_conv1_U", "Parent" : "0", "Child" : []},
 	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.w_conv2_U", "Parent" : "0", "Child" : []},
 	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.b_conv2_U", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.mem_conv1_U", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.mem_conv2_U", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.mem_conv1_V_U", "Parent" : "0", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.mem_conv2_V_U", "Parent" : "0", "Child" : []},
 	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.output_V_assign_U", "Parent" : "0", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dut_perform_conv_fu_168", "Parent" : "0", "Child" : ["9", "10", "11"], "CDFG" : "dut_perform_conv", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_dut_perform_conv_fu_183", "Parent" : "0", "Child" : ["9"], "CDFG" : "dut_perform_conv", "VariableLatency" : "1", "AlignedPipeline" : "0", "UnalignedPipeline" : "0", "ProcessNetwork" : "0", "Combinational" : "0", "ControlExist" : "1",
 		"Port" : [
-		{"Name" : "input_r", "Type" : "Memory", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "output_r", "Type" : "Memory", "Direction" : "IO", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "weight", "Type" : "Memory", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
-		{"Name" : "bias", "Type" : "Memory", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
+		{"Name" : "input_V", "Type" : "Memory", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
+		{"Name" : "output_V", "Type" : "Memory", "Direction" : "IO", "BlockSignal" : [], "SubConnect" : []}, 
+		{"Name" : "weight_V", "Type" : "Memory", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
+		{"Name" : "bias_V", "Type" : "Memory", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
 		{"Name" : "M", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
 		{"Name" : "N", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}, 
 		{"Name" : "O", "Type" : "None", "Direction" : "I", "BlockSignal" : [], "SubConnect" : []}],
 		"WaitState" : [],
 		"SubBlockPort" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_perform_conv_fu_168.dut_fadd_32ns_32ns_32_5_full_dsp_U1", "Parent" : "8", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_perform_conv_fu_168.dut_fmul_32ns_32ns_32_4_max_dsp_U2", "Parent" : "8", "Child" : []},
-	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_perform_conv_fu_168.dut_fcmp_32ns_32ns_1_1_U3", "Parent" : "8", "Child" : []},
-	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_uitofp_32ns_32_6_U11", "Parent" : "0", "Child" : []}]}
+	{"Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_dut_perform_conv_fu_183.dut_mac_muladd_16s_16s_30ns_30_1_U1", "Parent" : "8", "Child" : []},
+	{"Level" : "1", "Path" : "`AUTOTB_DUT_INST.dut_sitofp_32s_32_6_U9", "Parent" : "0", "Child" : []}]}
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "82596", "Max" : "12884004"}
-	, {"Name" : "Interval", "Min" : "82597", "Max" : "12884005"}
+	{"Name" : "Latency", "Min" : "41406", "Max" : "5495742"}
+	, {"Name" : "Interval", "Min" : "41407", "Max" : "5495743"}
 ]}
 
 set Spec2ImplPortList { 

@@ -12,21 +12,28 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [HLS-10] Analyzing design file 'cnn.cpp' ... 
 @I [HLS-10] Validating synthesis directives ...
 @I [HLS-10] Starting code transformations ...
+@I [XFORM-603] Inlining function 'ap_fixed_base<16, 2, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_float' into 'cnn_xcel' (cnn.cpp:73).
 @I [HLS-10] Checking synthesizability ...
-@I [XFORM-602] Inlining function 'cnn_xcel' into 'dut' (cnn.cpp:30) automatically.
-@W [SYNCHK-23] cnn.cpp:51: variable-indexed range selection may cause suboptimal QoR.
+@W [SYNCHK-23] cnn.cpp:56: variable-indexed range selection may cause suboptimal QoR.
 @I [SYNCHK-10] 0 error(s), 1 warning(s).
+@I [XFORM-401] Performing if-conversion on hyperblock from (cnn.cpp:73:13) to (cnn.cpp:71:28) in function 'cnn_xcel'... converting 3 basic blocks.
 @I [XFORM-602] Inlining function 'cnn_xcel' into 'dut' (cnn.cpp:30) automatically.
 @I [XFORM-11] Balancing expressions in function 'perform_conv' (layer.cpp:22)...3 expression(s) balanced.
-@I [HLS-111] Elapsed time: 22.29 seconds; current memory usage: 95.8 MB.
+@I [HLS-111] Elapsed time: 91.15 seconds; current memory usage: 192 MB.
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-10] Synthesizing 'dut' ...
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'dut_perform_conv' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
+@W [SCHED-21] Estimated clock period (9.09ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+@W [SCHED-21] The critical path consists of the following:
+	'mul' operation ('p_Val2_4', layer.cpp:42) (3.36 ns)
+	'add' operation ('__Val2__', layer.cpp:42) (3.02 ns)
+	'partselect' operation ('tmp_21', layer.cpp:42) (0 ns)
+	'store' operation (layer.cpp:42) of variable 'tmp_21', layer.cpp:42 on array 'output_V' (2.71 ns)
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.11 seconds; current memory usage: 96.9 MB.
+@I [HLS-111] Elapsed time: 0.11 seconds; current memory usage: 193 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'dut_perform_conv' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -35,13 +42,13 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 97.6 MB.
+@I [HLS-111] Elapsed time: 0.05 seconds; current memory usage: 194 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'dut' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.13 seconds; current memory usage: 97.9 MB.
+@I [HLS-111] Elapsed time: 0.22 seconds; current memory usage: 194 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'dut' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -50,24 +57,22 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.03 seconds; current memory usage: 98.2 MB.
+@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 195 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'dut_perform_conv' 
 @I [HLS-10] ----------------------------------------------------------------
-@I [RTGEN-100] Generating core module 'dut_fadd_32ns_32ns_32_5_full_dsp': 1 instance(s).
-@I [RTGEN-100] Generating core module 'dut_fcmp_32ns_32ns_1_1': 1 instance(s).
-@I [RTGEN-100] Generating core module 'dut_fmul_32ns_32ns_32_4_max_dsp': 1 instance(s).
+@I [RTGEN-100] Generating core module 'dut_mac_muladd_16s_16s_30ns_30_1': 1 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'dut_perform_conv'.
-@I [HLS-111] Elapsed time: 0.09 seconds; current memory usage: 99.2 MB.
+@I [HLS-111] Elapsed time: 0.11 seconds; current memory usage: 195 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'dut' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [RTGEN-500] Setting interface mode on port 'dut/strm_in_V_V' to 'ap_fifo'.
 @I [RTGEN-500] Setting interface mode on port 'dut/strm_out_V_V' to 'ap_fifo'.
 @I [RTGEN-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
-@I [RTGEN-100] Generating core module 'dut_uitofp_32ns_32_6': 1 instance(s).
+@I [RTGEN-100] Generating core module 'dut_sitofp_32s_32_6': 1 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'dut'.
-@I [HLS-111] Elapsed time: 0.26 seconds; current memory usage: 103 MB.
+@I [HLS-111] Elapsed time: 0.37 seconds; current memory usage: 198 MB.
 @W [RTMG-274] Memory 'dut_w_conv1' is read-only, switch it to a ROM.
 @I [RTMG-279] Implementing memory 'dut_w_conv1_rom' using block ROMs.
 @W [RTMG-274] Memory 'dut_b_conv1' is read-only, switch it to a ROM.
@@ -76,10 +81,10 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [RTMG-279] Implementing memory 'dut_w_conv2_rom' using block ROMs.
 @W [RTMG-274] Memory 'dut_b_conv2' is read-only, switch it to a ROM.
 @I [RTMG-279] Implementing memory 'dut_b_conv2_rom' using block ROMs.
-@I [RTMG-278] Implementing memory 'dut_mem_conv1_ram' using block RAMs.
+@I [RTMG-278] Implementing memory 'dut_mem_conv1_V_ram' using block RAMs.
 @I [RTMG-278] Implementing memory 'dut_output_V_assign_ram' using block RAMs.
 @I [HLS-10] Finished generating all RTL models.
 @I [SYSC-301] Generating SystemC RTL for dut.
 @I [VHDL-304] Generating VHDL RTL for dut.
 @I [VLOG-307] Generating Verilog RTL for dut.
-@I [HLS-112] Total elapsed time: 50.680 seconds; peak memory usage: 103 MB.
+@I [HLS-112] Total elapsed time: 199.907 seconds; peak memory usage: 198 MB.

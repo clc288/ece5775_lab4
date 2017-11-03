@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'dut_perform_conv'" level="0">
-<item name = "Date">Sat Oct 28 19:55:01 2017
+<item name = "Date">Thu Nov  2 22:46:56 2017
 </item>
 <item name = "Version">2016.2 (Build 1577090 on Thu Jun 02 16:59:10 MDT 2016)</item>
 <item name = "Project">cnn.prj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.41, 1.25</column>
+<column name="ap_clk">10.00, 9.09, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">39971, 6440675, 39971, 6440675, none</column>
+<column name="">17507, 2744675, 17507, 2744675, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -36,15 +36,15 @@
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
 <column name="- Loop 1">800, 800, 1, -, -, 800, no</column>
-<column name="- Loop 2">36320, 6424704, 1135 ~ 100386, -, -, 32 ~ 64, no</column>
-<column name=" + Loop 2.1">1133, 100384, 1133 ~ 3137, -, -, 1 ~ 32, no</column>
-<column name="  ++ Loop 2.1.1">1131, 3135, 377 ~ 627, -, -, 3 ~ 5, no</column>
-<column name="   +++ Loop 2.1.1.1">375, 625, 125, -, -, 3 ~ 5, no</column>
-<column name="    ++++ Loop 2.1.1.1.1">123, 123, 41, -, -, 3, no</column>
-<column name="     +++++ Loop 2.1.1.1.1.1">39, 39, 13, -, -, 3, no</column>
-<column name="- Loop 3">2848, 15168, 89 ~ 237, -, -, 32 ~ 64, no</column>
-<column name=" + Loop 3.1">87, 235, 29 ~ 47, -, -, 3 ~ 5, no</column>
-<column name="  ++ Loop 3.1.1">27, 45, 9, -, -, 3 ~ 5, no</column>
+<column name="- Loop 2">15584, 2738304, 487 ~ 42786, -, -, 32 ~ 64, no</column>
+<column name=" + Loop 2.1">485, 42784, 485 ~ 1337, -, -, 1 ~ 32, no</column>
+<column name="  ++ Loop 2.1.1">483, 1335, 161 ~ 267, -, -, 3 ~ 5, no</column>
+<column name="   +++ Loop 2.1.1.1">159, 265, 53, -, -, 3 ~ 5, no</column>
+<column name="    ++++ Loop 2.1.1.1.1">51, 51, 17, -, -, 3, no</column>
+<column name="     +++++ Loop 2.1.1.1.1.1">15, 15, 5, -, -, 3, no</column>
+<column name="- Loop 3">1120, 5568, 35 ~ 87, -, -, 32 ~ 64, no</column>
+<column name=" + Loop 3.1">33, 85, 11 ~ 17, -, -, 3 ~ 5, no</column>
+<column name="  ++ Loop 3.1.1">9, 15, 3, -, -, 3 ~ 5, no</column>
 </table>
 </item>
 </section>

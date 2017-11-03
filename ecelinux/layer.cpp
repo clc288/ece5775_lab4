@@ -19,7 +19,7 @@
 //              O - width of output fmaps
 // @param[out] : output - output fmaps
 
-void perform_conv(float input[MAX_FMAP], float output[MAX_FMAP], const float weight[MAX_W_CONV], const float bias[MAX_B_CONV], int M, int N, int O) {
+void perform_conv(fixed16_t input[MAX_FMAP], fixed16_t output[MAX_FMAP], const fixed16_t weight[MAX_W_CONV], const fixed16_t bias[MAX_B_CONV], int M, int N, int O) {
 
   int I = O+K-1;
   int ifmap_size = I*I;
@@ -52,8 +52,8 @@ void perform_conv(float input[MAX_FMAP], float output[MAX_FMAP], const float wei
     for (int x = 0; x < O; x++) {
       for (int y = 0; y < O; y++) {
         int index = x + y * O + n * ofmap_size;
-        float biased = output[index] + bias[n];
-        output[index] = (biased > 0) ? biased : 0; 
+        fixed16_t biased = output[index] + bias[n];
+        output[index] = (biased > 0) ? biased : (fixed16_t)0; 
       }
     }
   }
