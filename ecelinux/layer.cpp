@@ -29,17 +29,18 @@ void perform_conv(fixed16_t input[MAX_FMAP], fixed16_t output[MAX_FMAP], const f
   for (int i = 0; i < MAX_FMAP; i++) output[i] = 0;
 
   // perform convolution kernel
-  for (int n = 0; n < N; n++) {
-    for (int m = 0; m < M; m++) {
-      for (int x = 0; x < O; x++) {
-        for (int y = 0; y < O; y++) {
-          for (int c = 0; c < K; c++) {
-            for (int r = 0; r < K; r++) {
+  for (int x = 0; x < O ; x++) {
+    for (int y = 0; y < O; y++) {
+      Ln: for (int n = 0; n < N; n++) {
+        Lm: for (int m = 0; m < M; m++) {
+         Lc: for (int c = 0; c < K; c++) {
+           Lr:for (int r = 0; r < K; r++) {
               int i_index = x + c + (y + r) * I + m * ifmap_size;
               int w_index = c + r * K + (n * M + m) * FILTER_SIZE;
               int o_index = x + y * O + n * ofmap_size;
               //TODO: finish the innermost loop
-              output[o_index] = output[o_index] + input[i_index] * weight[w_index];
+              fixed16_t in_x_w = input[i_index] * weight[w_index];
+              output[o_index] = output[o_index] + in_x_w;
             }
           }
         }

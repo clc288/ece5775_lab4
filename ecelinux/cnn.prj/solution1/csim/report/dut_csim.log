@@ -63,7 +63,7 @@ make[1]: Leaving directory `/home/clc288/lab4/ecelinux/cnn.prj/solution1/csim/bu
 #57: 	TestInstance=0x60434b0e00 	Interpreted=2 	Expected=2
 #58: 	TestInstance=0x70e18f9c00 	Interpreted=2 	Expected=2
 #59: 	TestInstance=0x41c18f8900 	Interpreted=2 	Expected=2
-#60: 	TestInstance=0x105126cb1e00 	Interpreted=0 	Expected=2 	[Mismatch!]
+#60: 	TestInstance=0x105126cb1e00 	Interpreted=6 	Expected=2 	[Mismatch!]
 #61: 	TestInstance=0x2070618e1f00 	Interpreted=2 	Expected=2
 #62: 	TestInstance=0x0e06381111c 	Interpreted=3 	Expected=3
 #63: 	TestInstance=0x0e0c1c31c00 	Interpreted=3 	Expected=3
@@ -186,5 +186,5 @@ make[1]: Leaving directory `/home/clc288/lab4/ecelinux/cnn.prj/solution1/csim/bu
 #180: 	TestInstance=0x31e6cf8c00 	Interpreted=0 	Expected=0
 Number of test instances = 180
 Overall Error Rate = 5%
-digitrec sw         :      1 calls; 304.564 msecs total time
+digitrec sw         :      1 calls; 329.313 msecs total time
 INFO: [SIM 1] CSim done with 0 errors.

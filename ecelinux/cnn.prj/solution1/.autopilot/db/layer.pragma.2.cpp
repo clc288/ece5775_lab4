@@ -40168,7 +40168,7 @@ typedef ap_uint<6> bit6_t;
 typedef ap_uint<32> bit32_t;
 typedef ap_uint<64> bit64_t;
 typedef ap_uint<49> digit;
-typedef ap_fixed<16, 2> fixed16_t;
+typedef ap_fixed<14, 2> fixed16_t;
 
 typedef union {float f; int i;} union_f_i;
 # 6 "./model_conv.h" 2
@@ -40274,17 +40274,27 @@ void perform_conv(fixed16_t input[MAX_FMAP], fixed16_t output[MAX_FMAP], const f
   for (int i = 0; i < MAX_FMAP; i++) output[i] = 0;
 
   // perform convolution kernel
-  for (int n = 0; n < N; n++) {
-    for (int m = 0; m < M; m++) {
-      for (int x = 0; x < O; x++) {
-        for (int y = 0; y < O; y++) {
-          for (int c = 0; c < K; c++) {
-            for (int r = 0; r < K; r++) {
+  for (int x = 0; x < O ; x++) {
+    for (int y = 0; y < O; y++) {
+      Ln: for (int n = 0; n < N; n++) {
+        Lm: for (int m = 0; m < M; m++) {
+_ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
+# 35 "layer.cpp"
+
+         Lc: for (int c = 0; c < K; c++) {
+_ssdm_Unroll(0,0,0, "");
+# 36 "layer.cpp"
+
+           Lr:for (int r = 0; r < K; r++) {
+_ssdm_Unroll(0,0,0, "");
+# 37 "layer.cpp"
+
               int i_index = x + c + (y + r) * I + m * ifmap_size;
               int w_index = c + r * K + (n * M + m) * FILTER_SIZE;
               int o_index = x + y * O + n * ofmap_size;
               //TODO: finish the innermost loop
-              output[o_index] = output[o_index] + input[i_index] * weight[w_index];
+              fixed16_t in_x_w = input[i_index] * weight[w_index];
+              output[o_index] = output[o_index] + in_x_w;
             }
           }
         }

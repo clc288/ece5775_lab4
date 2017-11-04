@@ -10,7 +10,7 @@ use ieee.std_logic_1164.all;
 
 entity dut_sitofp_32s_32_6 is
     generic (
-        ID         : integer := 9;
+        ID         : integer := 94;
         NUM_STAGE  : integer := 6;
         din0_WIDTH : integer := 32;
         dout_WIDTH : integer := 32

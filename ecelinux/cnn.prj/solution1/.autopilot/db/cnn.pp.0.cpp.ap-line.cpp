@@ -39310,7 +39310,7 @@ typedef ap_uint<6> bit6_t;
 typedef ap_uint<32> bit32_t;
 typedef ap_uint<64> bit64_t;
 typedef ap_uint<49> digit;
-typedef ap_fixed<16, 2> fixed16_t;
+typedef ap_fixed<14, 2> fixed16_t;
 #pragma empty_line
 typedef union {float f; int i;} union_f_i;
 #pragma line 12 "./cnn.h" 2

@@ -57,7 +57,7 @@
 #57: 	TestInstance=0x60434b0e00 	Interpreted=2 	Expected=2
 #58: 	TestInstance=0x70e18f9c00 	Interpreted=2 	Expected=2
 #59: 	TestInstance=0x41c18f8900 	Interpreted=2 	Expected=2
-#60: 	TestInstance=0x105126cb1e00 	Interpreted=0 	Expected=2 	[Mismatch!]
+#60: 	TestInstance=0x105126cb1e00 	Interpreted=6 	Expected=2 	[Mismatch!]
 #61: 	TestInstance=0x2070618e1f00 	Interpreted=2 	Expected=2
 #62: 	TestInstance=0x0e06381111c 	Interpreted=3 	Expected=3
 #63: 	TestInstance=0x0e0c1c31c00 	Interpreted=3 	Expected=3

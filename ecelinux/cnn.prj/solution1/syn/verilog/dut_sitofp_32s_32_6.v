@@ -10,7 +10,7 @@
 
 module dut_sitofp_32s_32_6
 #(parameter
-    ID         = 9,
+    ID         = 94,
     NUM_STAGE  = 6,
     din0_WIDTH = 32,
     dout_WIDTH = 32

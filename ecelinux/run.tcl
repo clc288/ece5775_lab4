@@ -26,10 +26,12 @@ set_part {xc7z020clg484-1}
 create_clock -period 10
 
 ### You can insert your own directives here ###
-#set_directive_unroll perform_conv1/Ln
-#set_directive_unroll perform_conv2/Ln
-#set_directive_array_partition -type block -factor 5 cnn_xcel layer1_out
-#set_directive_array_partition -type block -factor 3 cnn_xcel layer2_out
+set_directive_unroll perform_conv/Lc
+set_directive_unroll perform_conv/Lr
+set_directive_pipeline perform_conv/Lm
+set_directive_array_partition -type cyclic -factor 5 cnn_xcel mem_conv2
+set_directive_array_partition -type cyclic -factor 3 cnn_xcel mem_conv1
+#set_directive_pipeline perform_conv/Ln
 
 
 ############################################

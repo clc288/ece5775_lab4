@@ -39330,7 +39330,7 @@ typedef ap_uint<6> bit6_t;
 typedef ap_uint<32> bit32_t;
 typedef ap_uint<64> bit64_t;
 typedef ap_uint<49> digit;
-typedef ap_fixed<16, 2> fixed16_t;
+typedef ap_fixed<14, 2> fixed16_t;
 
 typedef union {float f; int i;} union_f_i;
 #12 "./cnn.h" 2
@@ -39483,7 +39483,13 @@ _ssdm_SpecConstant(b_conv2);
 #46 "cnn.cpp" 2
 
   fixed16_t mem_conv1[800];
+_ssdm_SpecArrayPartition( mem_conv1, 1, "CYCLIC", 3, "");
+#47 "cnn.cpp"
+
   fixed16_t mem_conv2[800];
+_ssdm_SpecArrayPartition( mem_conv2, 1, "CYCLIC", 5, "");
+#48 "cnn.cpp"
+
  //fixed16_t layer1_in[800];
  //fixed16_t layer1_out[800];
 

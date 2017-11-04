@@ -621,3 +621,5 @@
 #pragma line 43 "./model_conv.h" 2 ::: 39467
 #pragma line 43 "./model_conv.h" ::: 39470
 #pragma line 46 "cnn.cpp" 2 ::: 39472
+#pragma line 47 "cnn.cpp" ::: 39476
+#pragma line 48 "cnn.cpp" ::: 39480

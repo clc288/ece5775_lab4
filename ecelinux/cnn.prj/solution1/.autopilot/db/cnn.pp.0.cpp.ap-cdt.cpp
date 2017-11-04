@@ -39330,7 +39330,7 @@ typedef ap_uint<6> bit6_t;
 typedef ap_uint<32> bit32_t;
 typedef ap_uint<64> bit64_t;
 typedef ap_uint<49> digit;
-typedef ap_fixed<16, 2> fixed16_t;
+typedef ap_fixed<14, 2> fixed16_t;
 #pragma empty_line
 typedef union {float f; int i;} union_f_i;
 #pragma line 12 "./cnn.h" 2
@@ -39483,7 +39483,13 @@ _ssdm_SpecConstant(b_conv2);
 #pragma line 46 "cnn.cpp" 2
 #pragma empty_line
   fixed16_t mem_conv1[800];
+#pragma HLS ARRAY_PARTITION variable=mem_conv1 cyclic factor=3 dim=1
+#pragma line 47 "cnn.cpp"
+
   fixed16_t mem_conv2[800];
+#pragma HLS ARRAY_PARTITION variable=mem_conv2 cyclic factor=5 dim=1
+#pragma line 48 "cnn.cpp"
+
  //fixed16_t layer1_in[800];
  //fixed16_t layer1_out[800];
 #pragma empty_line

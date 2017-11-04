@@ -12,28 +12,50 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [HLS-10] Analyzing design file 'cnn.cpp' ... 
 @I [HLS-10] Validating synthesis directives ...
 @I [HLS-10] Starting code transformations ...
-@I [XFORM-603] Inlining function 'ap_fixed_base<16, 2, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_float' into 'cnn_xcel' (cnn.cpp:73).
+@I [XFORM-603] Inlining function 'ap_fixed_base<14, 2, true, (ap_q_mode)5, (ap_o_mode)3, 0>::to_float' into 'cnn_xcel' (cnn.cpp:73).
 @I [HLS-10] Checking synthesizability ...
 @W [SYNCHK-23] cnn.cpp:56: variable-indexed range selection may cause suboptimal QoR.
 @I [SYNCHK-10] 0 error(s), 1 warning(s).
-@I [XFORM-401] Performing if-conversion on hyperblock from (cnn.cpp:73:13) to (cnn.cpp:71:28) in function 'cnn_xcel'... converting 3 basic blocks.
-@I [XFORM-602] Inlining function 'cnn_xcel' into 'dut' (cnn.cpp:30) automatically.
-@I [XFORM-11] Balancing expressions in function 'perform_conv' (layer.cpp:22)...3 expression(s) balanced.
-@I [HLS-111] Elapsed time: 91.15 seconds; current memory usage: 192 MB.
+@I [XFORM-502] Unrolling all sub-loops inside loop 'Lm' (layer.cpp:35) in function 'perform_conv' for pipelining.
+@I [XFORM-501] Unrolling loop 'Lc' (layer.cpp:36) in function 'perform_conv' completely.
+@I [XFORM-501] Unrolling loop 'Lr' (layer.cpp:37) in function 'perform_conv' completely.
+@I [XFORM-101] Partitioning array 'mem_conv1.V' (cnn.cpp:47) in dimension 1 with a cyclic factor 3.
+@I [XFORM-101] Partitioning array 'mem_conv2.V' (cnn.cpp:48) in dimension 1 with a cyclic factor 5.
+@I [XFORM-401] Performing if-conversion on hyperblock from (layer.cpp:35:42) to (layer.cpp:43:33) in function 'perform_conv.1'... converting 5 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (layer.cpp:55:47) to (layer.cpp:57:26) in function 'perform_conv.1'... converting 5 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (layer.cpp:35:42) to (layer.cpp:43:33) in function 'perform_conv'... converting 5 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock to (layer.cpp:43:33) in function 'perform_conv'... converting 5 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock to (layer.cpp:43:33) in function 'perform_conv'... converting 5 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (layer.cpp:38:65) to (layer.cpp:43:33) in function 'perform_conv'... converting 5 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (layer.cpp:38:65) to (layer.cpp:43:33) in function 'perform_conv'... converting 5 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (layer.cpp:38:65) to (layer.cpp:43:33) in function 'perform_conv'... converting 5 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (layer.cpp:38:65) to (layer.cpp:43:33) in function 'perform_conv'... converting 5 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (layer.cpp:38:65) to (layer.cpp:43:33) in function 'perform_conv'... converting 5 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (layer.cpp:38:65) to (layer.cpp:43:33) in function 'perform_conv'... converting 5 basic blocks.
+@I [XFORM-401] Performing if-conversion on hyperblock from (cnn.cpp:73:13) to (cnn.cpp:71:28) in function 'cnn_xcel'... converting 7 basic blocks.
+@I [XFORM-11] Balancing expressions in function 'perform_conv.1' (layer.cpp:29:36)...23 expression(s) balanced.
+@I [XFORM-11] Balancing expressions in function 'perform_conv' (layer.cpp:22)...6 expression(s) balanced.
+@I [XFORM-541] Flattening a loop nest 'Ln' (layer.cpp:34:40) in function 'perform_conv.1'.
+@I [XFORM-541] Flattening a loop nest 'Loop-2.1' (layer.cpp:33:19) in function 'perform_conv.1'.
+@I [XFORM-541] Flattening a loop nest 'Loop-2' (layer.cpp:32:17) in function 'perform_conv.1'.
+@I [XFORM-541] Flattening a loop nest 'Ln' (layer.cpp:34:40) in function 'perform_conv'.
+@I [XFORM-541] Flattening a loop nest 'Loop-2.1' (layer.cpp:33:19) in function 'perform_conv'.
+@I [XFORM-541] Flattening a loop nest 'Loop-2' (layer.cpp:32:17) in function 'perform_conv'.
+@I [HLS-111] Elapsed time: 177.45 seconds; current memory usage: 214 MB.
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-10] Synthesizing 'dut' ...
+@W [SYN-103] Legalizing function name 'dut_perform_conv.1' to 'dut_perform_conv_1'.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'dut_perform_conv' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
-@W [SCHED-21] Estimated clock period (9.09ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
-@W [SCHED-21] The critical path consists of the following:
-	'mul' operation ('p_Val2_4', layer.cpp:42) (3.36 ns)
-	'add' operation ('__Val2__', layer.cpp:42) (3.02 ns)
-	'partselect' operation ('tmp_21', layer.cpp:42) (0 ns)
-	'store' operation (layer.cpp:42) of variable 'tmp_21', layer.cpp:42 on array 'output_V' (2.71 ns)
+@I [SCHED-61] Pipelining loop 'L_Ln_Lm'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)
+   between 'store' operation (layer.cpp:43) of variable 'p_Val2_6_2_2', layer.cpp:43 on array 'output_0_V' and 'load' operation ('output_0_V_load_1', layer.cpp:43) on array 'output_0_V'.
+@W [SCHED-69] Unable to schedule 'load' operation ('input_2_V_load_7', layer.cpp:42) on array 'input_2_V' due to limited memory ports.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 5, Depth: 19.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.11 seconds; current memory usage: 193 MB.
+@I [HLS-111] Elapsed time: 0.56 seconds; current memory usage: 217 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'dut_perform_conv' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -42,13 +64,48 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.05 seconds; current memory usage: 194 MB.
+@I [HLS-111] Elapsed time: 1 seconds; current memory usage: 219 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'dut_perform_conv_1' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'L_Ln_Lm'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)
+   between 'store' operation (layer.cpp:43) of variable 'p_Val2_6_2_2', layer.cpp:43 on array 'output_V' and 'load' operation ('output_V_load_1', layer.cpp:43) on array 'output_V'.
+@W [SCHED-69] Unable to schedule 'load' operation ('input_V_load_8', layer.cpp:38) on array 'input_V' due to limited memory ports.
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 5, Depth: 22.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 1.41 seconds; current memory usage: 221 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'dut_perform_conv_1' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 1.06 seconds; current memory usage: 224 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'dut_cnn_xcel' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 1.07 seconds; current memory usage: 224 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'dut_cnn_xcel' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.25 seconds; current memory usage: 225 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'dut' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.22 seconds; current memory usage: 194 MB.
+@I [HLS-111] Elapsed time: 0.37 seconds; current memory usage: 225 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'dut' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -57,34 +114,68 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.04 seconds; current memory usage: 195 MB.
+@I [HLS-111] Elapsed time: 0.11 seconds; current memory usage: 225 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'dut_perform_conv' 
 @I [HLS-10] ----------------------------------------------------------------
-@I [RTGEN-100] Generating core module 'dut_mac_muladd_16s_16s_30ns_30_1': 1 instance(s).
+@I [RTGEN-100] Generating core module 'dut_mac_muladd_6ns_6ns_5ns_10_1': 2 instance(s).
+@I [RTGEN-100] Generating core module 'dut_mul_mul_12ns_10ns_22_1': 3 instance(s).
+@I [RTGEN-100] Generating core module 'dut_mul_mul_14s_12s_26_1': 9 instance(s).
+@I [RTGEN-100] Generating core module 'dut_mux_5to1_sel32_14_1': 2 instance(s).
+@I [RTGEN-100] Generating core module 'dut_urem_10ns_4ns_10_14_seq': 1 instance(s).
+@I [RTGEN-100] Generating core module 'dut_urem_10ns_4ns_4_14': 2 instance(s).
+@I [RTGEN-100] Generating core module 'dut_urem_6ns_3ns_3_10': 6 instance(s).
+@I [RTGEN-100] Generating core module 'dut_urem_6ns_4ns_4_10': 1 instance(s).
+@I [RTGEN-100] Generating core module 'dut_urem_9ns_3ns_3_13': 3 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'dut_perform_conv'.
-@I [HLS-111] Elapsed time: 0.11 seconds; current memory usage: 195 MB.
+@I [HLS-111] Elapsed time: 0.38 seconds; current memory usage: 229 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'dut_perform_conv_1' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Generating core module 'dut_mul_mul_12ns_10ns_22_1': 9 instance(s).
+@I [RTGEN-100] Generating core module 'dut_mul_mul_14ns_12ns_26_1': 3 instance(s).
+@I [RTGEN-100] Generating core module 'dut_mul_mul_14s_12s_26_1': 9 instance(s).
+@I [RTGEN-100] Generating core module 'dut_mul_mul_15ns_13ns_28_1': 1 instance(s).
+@I [RTGEN-100] Generating core module 'dut_mux_5to1_sel32_14_1': 9 instance(s).
+@I [RTGEN-100] Generating core module 'dut_urem_10ns_4ns_10_14': 9 instance(s).
+@I [RTGEN-100] Generating core module 'dut_urem_12ns_3ns_3_16': 2 instance(s).
+@I [RTGEN-100] Generating core module 'dut_urem_13ns_3ns_3_17_seq': 1 instance(s).
+@I [RTGEN-100] Generating core module 'dut_urem_5ns_3ns_3_9': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'dut_perform_conv_1'.
+@I [HLS-111] Elapsed time: 1.47 seconds; current memory usage: 239 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'dut_cnn_xcel' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Generating core module 'dut_sitofp_32s_32_6': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'dut_cnn_xcel'.
+@I [HLS-111] Elapsed time: 1.35 seconds; current memory usage: 247 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'dut' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [RTGEN-500] Setting interface mode on port 'dut/strm_in_V_V' to 'ap_fifo'.
 @I [RTGEN-500] Setting interface mode on port 'dut/strm_out_V_V' to 'ap_fifo'.
 @I [RTGEN-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
-@I [RTGEN-100] Generating core module 'dut_sitofp_32s_32_6': 1 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'dut'.
-@I [HLS-111] Elapsed time: 0.37 seconds; current memory usage: 198 MB.
-@W [RTMG-274] Memory 'dut_w_conv1' is read-only, switch it to a ROM.
-@I [RTMG-279] Implementing memory 'dut_w_conv1_rom' using block ROMs.
-@W [RTMG-274] Memory 'dut_b_conv1' is read-only, switch it to a ROM.
-@I [RTMG-279] Implementing memory 'dut_b_conv1_rom' using block ROMs.
-@W [RTMG-274] Memory 'dut_w_conv2' is read-only, switch it to a ROM.
-@I [RTMG-279] Implementing memory 'dut_w_conv2_rom' using block ROMs.
-@W [RTMG-274] Memory 'dut_b_conv2' is read-only, switch it to a ROM.
-@I [RTMG-279] Implementing memory 'dut_b_conv2_rom' using block ROMs.
-@I [RTMG-278] Implementing memory 'dut_mem_conv1_V_ram' using block RAMs.
-@I [RTMG-278] Implementing memory 'dut_output_V_assign_ram' using block RAMs.
+@I [HLS-111] Elapsed time: 0.38 seconds; current memory usage: 249 MB.
+@I [RTMG-282] Generating pipelined core: 'dut_urem_10ns_4ns_4_14_div'
+@I [RTMG-282] Generating pipelined core: 'dut_urem_9ns_3ns_3_13_div'
+@I [RTMG-282] Generating pipelined core: 'dut_urem_6ns_3ns_3_10_div'
+@I [RTMG-282] Generating pipelined core: 'dut_urem_6ns_4ns_4_10_div'
+@I [RTMG-282] Generating pipelined core: 'dut_urem_10ns_4ns_10_14_seq_div'
+@I [RTMG-279] Implementing memory 'dut_perform_conv_w_conv1_rom' using auto ROMs.
+@I [RTMG-279] Implementing memory 'dut_perform_conv_b_conv1_rom' using distributed ROMs.
+@I [RTMG-282] Generating pipelined core: 'dut_urem_12ns_3ns_3_16_div'
+@I [RTMG-282] Generating pipelined core: 'dut_urem_5ns_3ns_3_9_div'
+@I [RTMG-282] Generating pipelined core: 'dut_urem_10ns_4ns_10_14_div'
+@I [RTMG-282] Generating pipelined core: 'dut_urem_13ns_3ns_3_17_seq_div'
+@I [RTMG-279] Implementing memory 'dut_perform_conv_1_w_conv2_rom' using auto ROMs.
+@I [RTMG-279] Implementing memory 'dut_perform_conv_1_b_conv2_rom' using distributed ROMs.
+@I [RTMG-278] Implementing memory 'dut_cnn_xcel_mem_conv1_0_V_ram' using block RAMs.
+@I [RTMG-278] Implementing memory 'dut_cnn_xcel_mem_conv1_2_V_ram' using block RAMs.
+@I [RTMG-278] Implementing memory 'dut_cnn_xcel_mem_conv2_0_V_ram' using block RAMs.
+@I [RTMG-278] Implementing memory 'dut_result_ram' using block RAMs.
 @I [HLS-10] Finished generating all RTL models.
 @I [SYSC-301] Generating SystemC RTL for dut.
 @I [VHDL-304] Generating VHDL RTL for dut.
 @I [VLOG-307] Generating Verilog RTL for dut.
-@I [HLS-112] Total elapsed time: 199.907 seconds; peak memory usage: 198 MB.
+@I [HLS-112] Total elapsed time: 325.278 seconds; peak memory usage: 249 MB.
