@@ -20,12 +20,28 @@ set_property parent.project_path /home/clc288/lab4/ecelinux/zedboard_project/xil
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/vivado-ip [current_project]
-add_files -quiet /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp
-set_property used_in_implementation false [get_files /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp]
 add_files -quiet /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.dcp
 set_property used_in_implementation false [get_files /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.dcp]
+add_files -quiet /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp
+set_property used_in_implementation false [get_files /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.dcp]
 add_files -quiet /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.dcp
 set_property used_in_implementation false [get_files /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.dcp]
+read_ip -quiet /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.xci
+set_property used_in_implementation false [get_files -all /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo/vga_fifo.xdc]
+set_property used_in_implementation false [get_files -all /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo_ooc.xdc]
+set_property is_locked true [get_files /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/vga_fifo/vga_fifo.xci]
+
+read_ip -quiet /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.xci
+set_property used_in_implementation false [get_files -all /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048/fifo_8x2048.xdc]
+set_property used_in_implementation false [get_files -all /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048_ooc.xdc]
+set_property is_locked true [get_files /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_8x2048/fifo_8x2048.xci]
+
+read_ip -quiet /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.xci
+set_property used_in_implementation false [get_files -all /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512/fifo_32x512.xdc]
+set_property used_in_implementation false [get_files -all /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512_ooc.xdc]
+set_property is_locked true [get_files /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/fifo_32x512/fifo_32x512.xci]
+
 add_files /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/vivado_system/vivado_system.bd
 set_property used_in_implementation false [get_files -all /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_processing_system7_0_0/vivado_system_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/vivado_system/ip/vivado_system_rst_processing_system7_0_100M_0/vivado_system_rst_processing_system7_0_100M_0_board.xdc]
@@ -39,17 +55,8 @@ set_property used_in_implementation false [get_files -all /home/clc288/lab4/ecel
 set_property used_in_implementation false [get_files -all /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/vivado_system/vivado_system_ooc.xdc]
 set_property is_locked true [get_files /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/vivado_system/vivado_system.bd]
 
-read_ip -quiet /home/clc288/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fadd_3_full_dsp_32/dut_ap_fadd_3_full_dsp_32.xci
-set_property is_locked true [get_files /home/clc288/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fadd_3_full_dsp_32/dut_ap_fadd_3_full_dsp_32.xci]
-
-read_ip -quiet /home/clc288/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fcmp_0_no_dsp_32/dut_ap_fcmp_0_no_dsp_32.xci
-set_property is_locked true [get_files /home/clc288/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fcmp_0_no_dsp_32/dut_ap_fcmp_0_no_dsp_32.xci]
-
-read_ip -quiet /home/clc288/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fmul_2_max_dsp_32/dut_ap_fmul_2_max_dsp_32.xci
-set_property is_locked true [get_files /home/clc288/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_fmul_2_max_dsp_32/dut_ap_fmul_2_max_dsp_32.xci]
-
-read_ip -quiet /home/clc288/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_uitofp_4_no_dsp_32/dut_ap_uitofp_4_no_dsp_32.xci
-set_property is_locked true [get_files /home/clc288/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_uitofp_4_no_dsp_32/dut_ap_uitofp_4_no_dsp_32.xci]
+read_ip -quiet /home/clc288/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_sitofp_4_no_dsp_32/dut_ap_sitofp_4_no_dsp_32.xci
+set_property is_locked true [get_files /home/clc288/lab4/ecelinux/zedboard_project/xillybus/vivado/xillydemo.srcs/sources_1/ip/dut_ap_sitofp_4_no_dsp_32/dut_ap_sitofp_4_no_dsp_32.xci]
 
 read_verilog -library xil_defaultlib {
   /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/xillydemo.v
@@ -58,18 +65,34 @@ read_verilog -library xil_defaultlib {
   /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/system.v
   /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/smbus.v
   /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/i2s_audio.v
-  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_w_conv2.v
-  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_w_conv1.v
   /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut.v
-  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_uitofp_32ns_32_6.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_urem_9ns_3ns_3_13.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_urem_6ns_4ns_4_10.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_urem_6ns_3ns_3_10.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_urem_5ns_3ns_3_9.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_urem_13ns_3ns_3_17_seq.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_urem_12ns_3ns_3_16.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_urem_10ns_4ns_4_14.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_urem_10ns_4ns_10_14.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_urem_10ns_4ns_10_14_seq.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_sitofp_32s_32_6.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_result.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_perform_conv_w_conv1.v
   /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_perform_conv.v
-  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_output_V_assign.v
-  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_mem_conv1.v
-  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_fmul_32ns_32ns_32_4_max_dsp.v
-  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_fcmp_32ns_32ns_1_1.v
-  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_fadd_32ns_32ns_32_5_full_dsp.v
-  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_b_conv2.v
-  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_b_conv1.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_perform_conv_b_conv1.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_perform_conv_1_w_conv2.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_perform_conv_1.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_perform_conv_1_b_conv2.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_mux_5to1_sel32_14_1.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_mul_mul_15ns_13ns_28_1.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_mul_mul_14s_12s_26_1.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_mul_mul_14ns_12ns_26_1.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_mul_mul_12ns_10ns_22_1.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_mac_muladd_6ns_6ns_5ns_10_1.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_cnn_xcel.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_cnn_xcel_mem_conv2_0_V.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_cnn_xcel_mem_conv1_2_V.v
+  /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fpga-design/dut_cnn_xcel_mem_conv1_0_V.v
   /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fifo_8x2048.v
   /home/clc288/lab4/ecelinux/zedboard_project/xillybus/src/fifo_32x512.v
   /home/clc288/lab4/ecelinux/zedboard_project/vivado-essentials/system.v

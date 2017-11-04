@@ -2068,7 +2068,7 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((ap_const_logic_1 = ap_sig_cseq_ST_pp0_stg1_fsm_3) and (ap_const_lv1_0 = ap_reg_ppstg_exitcond_flatten_reg_2894_pp0_iter3) and (ap_const_lv1_0 = ap_reg_ppstg_exitcond_flatten_mid_reg_2912_pp0_iter3) and (ap_const_lv1_0 = ap_reg_ppstg_exitcond9_mid1_reg_2929_pp0_iter3))) then
+            if (((ap_const_logic_1 = ap_sig_cseq_ST_pp0_stg1_fsm_3) and (ap_const_lv1_0 = ap_reg_ppstg_exitcond_flatten_mid_reg_2912_pp0_iter3) and (ap_const_lv1_0 = ap_reg_ppstg_exitcond_flatten_reg_2894_pp0_iter3) and (ap_const_lv1_0 = ap_reg_ppstg_exitcond9_mid1_reg_2929_pp0_iter3))) then
                 newIndex3_reg_3401 <= mul1_fu_2696_p2(25 downto 14);
             end if;
         end if;

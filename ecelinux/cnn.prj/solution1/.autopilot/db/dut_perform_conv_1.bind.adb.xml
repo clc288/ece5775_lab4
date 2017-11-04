@@ -1462,8 +1462,8 @@ ifBlock:5  %indvar_flatten_next1 = select i1 %exitcond_flatten, i14 1, i14 %indv
 <MemPortIdVec></MemPortIdVec>
 <condition id="393">
 <or_exp><and_exp><literal name="exitcond_flatten2" val="0"/>
-<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -6629,8 +6629,8 @@ ifBlock:6  br label %.preheader79.preheader
 <core>Cmp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="447">
-<or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
-<literal name="exitcond_flatten_mid" val="0"/>
+<or_exp><and_exp><literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="0"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -6647,8 +6647,8 @@ ifBlock:6  br label %.preheader79.preheader
 <core>Cmp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="453">
-<or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
-<literal name="exitcond_flatten_mid" val="0"/>
+<or_exp><and_exp><literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="0"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -6666,8 +6666,8 @@ ifBlock:6  br label %.preheader79.preheader
 <MemPortIdVec></MemPortIdVec>
 <condition id="428">
 <or_exp><and_exp><literal name="exitcond_flatten2" val="0"/>
-<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -6703,8 +6703,8 @@ ifBlock:6  br label %.preheader79.preheader
 <MemPortIdVec></MemPortIdVec>
 <condition id="446">
 <or_exp><and_exp><literal name="exitcond_flatten2" val="0"/>
-<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -6740,8 +6740,8 @@ ifBlock:6  br label %.preheader79.preheader
 <MemPortIdVec></MemPortIdVec>
 <condition id="452">
 <or_exp><and_exp><literal name="exitcond_flatten2" val="0"/>
-<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -7810,8 +7810,8 @@ ifBlock:6  br label %.preheader79.preheader
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="441">
-<or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
-<literal name="exitcond_flatten_mid" val="0"/>
+<or_exp><and_exp><literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="0"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -7828,8 +7828,8 @@ ifBlock:6  br label %.preheader79.preheader
 <core>DSP48</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="439">
-<or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
-<literal name="exitcond_flatten_mid" val="0"/>
+<or_exp><and_exp><literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="0"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -7846,8 +7846,8 @@ ifBlock:6  br label %.preheader79.preheader
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="437">
-<or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
-<literal name="exitcond_flatten_mid" val="0"/>
+<or_exp><and_exp><literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="0"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -8898,8 +8898,8 @@ ifBlock:6  br label %.preheader79.preheader
 <MemPortIdVec></MemPortIdVec>
 <condition id="436">
 <or_exp><and_exp><literal name="exitcond_flatten2" val="0"/>
-<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -15234,9 +15234,9 @@ branch2:1  br label %4
 </dataflow>
 <dataflow id="2412" from="exitcond_flatten2" to="stg_4" fromId="95" toId="4">
 </dataflow>
-<dataflow id="2413" from="exitcond_flatten" to="stg_4" fromId="97" toId="4">
+<dataflow id="2413" from="exitcond_flatten_mid" to="stg_4" fromId="103" toId="4">
 </dataflow>
-<dataflow id="2414" from="exitcond_flatten_mid" to="stg_4" fromId="103" toId="4">
+<dataflow id="2414" from="exitcond_flatten" to="stg_4" fromId="97" toId="4">
 </dataflow>
 <dataflow id="2415" from="exitcond_flatten2" to="stg_5" fromId="95" toId="5">
 </dataflow>
@@ -15264,17 +15264,17 @@ branch2:1  br label %4
 </dataflow>
 <dataflow id="2427" from="exitcond_flatten2" to="stg_17" fromId="95" toId="17">
 </dataflow>
-<dataflow id="2428" from="exitcond_flatten" to="stg_18" fromId="97" toId="18">
+<dataflow id="2428" from="exitcond_flatten_mid" to="stg_18" fromId="103" toId="18">
 </dataflow>
-<dataflow id="2429" from="exitcond_flatten_mid" to="stg_18" fromId="103" toId="18">
+<dataflow id="2429" from="exitcond_flatten" to="stg_18" fromId="97" toId="18">
 </dataflow>
 <dataflow id="2430" from="exitcond9_mid1" to="stg_18" fromId="107" toId="18">
 </dataflow>
 <dataflow id="2431" from="exitcond_flatten2" to="stg_18" fromId="95" toId="18">
 </dataflow>
-<dataflow id="2432" from="exitcond_flatten" to="stg_19" fromId="97" toId="19">
+<dataflow id="2432" from="exitcond_flatten_mid" to="stg_19" fromId="103" toId="19">
 </dataflow>
-<dataflow id="2433" from="exitcond_flatten_mid" to="stg_19" fromId="103" toId="19">
+<dataflow id="2433" from="exitcond_flatten" to="stg_19" fromId="97" toId="19">
 </dataflow>
 <dataflow id="2434" from="exitcond9_mid1" to="stg_19" fromId="107" toId="19">
 </dataflow>
@@ -15282,9 +15282,9 @@ branch2:1  br label %4
 </dataflow>
 <dataflow id="2436" from="exitcond_flatten2" to="stg_20" fromId="95" toId="20">
 </dataflow>
-<dataflow id="2437" from="exitcond_flatten" to="stg_20" fromId="97" toId="20">
+<dataflow id="2437" from="exitcond_flatten_mid" to="stg_20" fromId="103" toId="20">
 </dataflow>
-<dataflow id="2438" from="exitcond_flatten_mid" to="stg_20" fromId="103" toId="20">
+<dataflow id="2438" from="exitcond_flatten" to="stg_20" fromId="97" toId="20">
 </dataflow>
 <dataflow id="2439" from="exitcond9_mid1" to="stg_20" fromId="107" toId="20">
 </dataflow>

@@ -41,7 +41,7 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [XFORM-541] Flattening a loop nest 'Ln' (layer.cpp:34:40) in function 'perform_conv'.
 @I [XFORM-541] Flattening a loop nest 'Loop-2.1' (layer.cpp:33:19) in function 'perform_conv'.
 @I [XFORM-541] Flattening a loop nest 'Loop-2' (layer.cpp:32:17) in function 'perform_conv'.
-@I [HLS-111] Elapsed time: 177.45 seconds; current memory usage: 214 MB.
+@I [HLS-111] Elapsed time: 164.4 seconds; current memory usage: 214 MB.
 @I [HLS-10] Starting hardware synthesis ...
 @I [HLS-10] Synthesizing 'dut' ...
 @W [SYN-103] Legalizing function name 'dut_perform_conv.1' to 'dut_perform_conv_1'.
@@ -55,7 +55,7 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @W [SCHED-69] Unable to schedule 'load' operation ('input_2_V_load_7', layer.cpp:42) on array 'input_2_V' due to limited memory ports.
 @I [SCHED-61] Pipelining result: Target II: 1, Final II: 5, Depth: 19.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.56 seconds; current memory usage: 217 MB.
+@I [HLS-111] Elapsed time: 0.6 seconds; current memory usage: 217 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'dut_perform_conv' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -64,7 +64,7 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 1 seconds; current memory usage: 219 MB.
+@I [HLS-111] Elapsed time: 1.06 seconds; current memory usage: 219 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'dut_perform_conv_1' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -75,7 +75,7 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @W [SCHED-69] Unable to schedule 'load' operation ('input_V_load_8', layer.cpp:38) on array 'input_V' due to limited memory ports.
 @I [SCHED-61] Pipelining result: Target II: 1, Final II: 5, Depth: 22.
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 1.41 seconds; current memory usage: 221 MB.
+@I [HLS-111] Elapsed time: 1.51 seconds; current memory usage: 221 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'dut_perform_conv_1' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -84,13 +84,13 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 1.06 seconds; current memory usage: 224 MB.
+@I [HLS-111] Elapsed time: 1.15 seconds; current memory usage: 224 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'dut_cnn_xcel' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 1.07 seconds; current memory usage: 224 MB.
+@I [HLS-111] Elapsed time: 1.15 seconds; current memory usage: 224 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'dut_cnn_xcel' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -99,13 +99,13 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [BIND-101] Exploring resource sharing.
 @I [BIND-101] Binding ...
 @I [BIND-100] Finished micro-architecture generation.
-@I [HLS-111] Elapsed time: 0.25 seconds; current memory usage: 225 MB.
+@I [HLS-111] Elapsed time: 0.26 seconds; current memory usage: 225 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Scheduling module 'dut' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [SCHED-11] Starting scheduling ...
 @I [SCHED-11] Finished scheduling.
-@I [HLS-111] Elapsed time: 0.37 seconds; current memory usage: 225 MB.
+@I [HLS-111] Elapsed time: 0.38 seconds; current memory usage: 225 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Exploring micro-architecture for module 'dut' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -128,7 +128,7 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [RTGEN-100] Generating core module 'dut_urem_6ns_4ns_4_10': 1 instance(s).
 @I [RTGEN-100] Generating core module 'dut_urem_9ns_3ns_3_13': 3 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'dut_perform_conv'.
-@I [HLS-111] Elapsed time: 0.38 seconds; current memory usage: 229 MB.
+@I [HLS-111] Elapsed time: 0.4 seconds; current memory usage: 229 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'dut_perform_conv_1' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -142,13 +142,13 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [RTGEN-100] Generating core module 'dut_urem_13ns_3ns_3_17_seq': 1 instance(s).
 @I [RTGEN-100] Generating core module 'dut_urem_5ns_3ns_3_9': 1 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'dut_perform_conv_1'.
-@I [HLS-111] Elapsed time: 1.47 seconds; current memory usage: 239 MB.
+@I [HLS-111] Elapsed time: 1.53 seconds; current memory usage: 239 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'dut_cnn_xcel' 
 @I [HLS-10] ----------------------------------------------------------------
 @I [RTGEN-100] Generating core module 'dut_sitofp_32s_32_6': 1 instance(s).
 @I [RTGEN-100] Finished creating RTL model for 'dut_cnn_xcel'.
-@I [HLS-111] Elapsed time: 1.35 seconds; current memory usage: 247 MB.
+@I [HLS-111] Elapsed time: 1.46 seconds; current memory usage: 247 MB.
 @I [HLS-10] ----------------------------------------------------------------
 @I [HLS-10] -- Generating RTL for module 'dut' 
 @I [HLS-10] ----------------------------------------------------------------
@@ -156,7 +156,7 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [RTGEN-500] Setting interface mode on port 'dut/strm_out_V_V' to 'ap_fifo'.
 @I [RTGEN-500] Setting interface mode on function 'dut' to 'ap_ctrl_hs'.
 @I [RTGEN-100] Finished creating RTL model for 'dut'.
-@I [HLS-111] Elapsed time: 0.38 seconds; current memory usage: 249 MB.
+@I [HLS-111] Elapsed time: 0.4 seconds; current memory usage: 249 MB.
 @I [RTMG-282] Generating pipelined core: 'dut_urem_10ns_4ns_4_14_div'
 @I [RTMG-282] Generating pipelined core: 'dut_urem_9ns_3ns_3_13_div'
 @I [RTMG-282] Generating pipelined core: 'dut_urem_6ns_3ns_3_10_div'
@@ -178,4 +178,4 @@ Copyright (C) 1986-2016 Xilinx, Inc. All Rights Reserved.
 @I [SYSC-301] Generating SystemC RTL for dut.
 @I [VHDL-304] Generating VHDL RTL for dut.
 @I [VLOG-307] Generating Verilog RTL for dut.
-@I [HLS-112] Total elapsed time: 325.278 seconds; peak memory usage: 249 MB.
+@I [HLS-112] Total elapsed time: 258.80 seconds; peak memory usage: 249 MB.

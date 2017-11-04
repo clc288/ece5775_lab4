@@ -1462,8 +1462,8 @@ ifBlock:5  %indvar_flatten_next1 = select i1 %exitcond_flatten, i14 1, i14 %indv
 <MemPortIdVec></MemPortIdVec>
 <condition id="393">
 <or_exp><and_exp><literal name="exitcond_flatten2" val="0"/>
-<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="1"/>
 </and_exp></or_exp>
 </condition>
 
@@ -6629,8 +6629,8 @@ ifBlock:6  br label %.preheader79.preheader
 <core>Cmp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="447">
-<or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
-<literal name="exitcond_flatten_mid" val="0"/>
+<or_exp><and_exp><literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="0"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -6647,8 +6647,8 @@ ifBlock:6  br label %.preheader79.preheader
 <core>Cmp</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="453">
-<or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
-<literal name="exitcond_flatten_mid" val="0"/>
+<or_exp><and_exp><literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="0"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -6666,8 +6666,8 @@ ifBlock:6  br label %.preheader79.preheader
 <MemPortIdVec></MemPortIdVec>
 <condition id="428">
 <or_exp><and_exp><literal name="exitcond_flatten2" val="0"/>
-<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -6703,8 +6703,8 @@ ifBlock:6  br label %.preheader79.preheader
 <MemPortIdVec></MemPortIdVec>
 <condition id="446">
 <or_exp><and_exp><literal name="exitcond_flatten2" val="0"/>
-<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -6740,8 +6740,8 @@ ifBlock:6  br label %.preheader79.preheader
 <MemPortIdVec></MemPortIdVec>
 <condition id="452">
 <or_exp><and_exp><literal name="exitcond_flatten2" val="0"/>
-<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -7810,8 +7810,8 @@ ifBlock:6  br label %.preheader79.preheader
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="441">
-<or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
-<literal name="exitcond_flatten_mid" val="0"/>
+<or_exp><and_exp><literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="0"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -7828,8 +7828,8 @@ ifBlock:6  br label %.preheader79.preheader
 <core>DSP48</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="439">
-<or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
-<literal name="exitcond_flatten_mid" val="0"/>
+<or_exp><and_exp><literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="0"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -7846,8 +7846,8 @@ ifBlock:6  br label %.preheader79.preheader
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="437">
-<or_exp><and_exp><literal name="exitcond_flatten" val="0"/>
-<literal name="exitcond_flatten_mid" val="0"/>
+<or_exp><and_exp><literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="0"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>
@@ -8898,8 +8898,8 @@ ifBlock:6  br label %.preheader79.preheader
 <MemPortIdVec></MemPortIdVec>
 <condition id="436">
 <or_exp><and_exp><literal name="exitcond_flatten2" val="0"/>
-<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond_flatten_mid" val="0"/>
+<literal name="exitcond_flatten" val="1"/>
 <literal name="exitcond9_mid1" val="0"/>
 </and_exp></or_exp>
 </condition>

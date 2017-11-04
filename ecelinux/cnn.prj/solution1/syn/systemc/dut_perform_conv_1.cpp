@@ -3056,7 +3056,7 @@ void dut_perform_conv_1::thread_ap_clk_no_reset_() {
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_st25_fsm_7.read())) {
         n_1_reg_3643 = n_1_fu_2504_p2.read();
     }
-    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_pp0_stg1_fsm_3.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_ppstg_exitcond_flatten_reg_2894_pp0_iter3.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_ppstg_exitcond_flatten_mid_reg_2912_pp0_iter3.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_ppstg_exitcond9_mid1_reg_2929_pp0_iter3.read()))) {
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_pp0_stg1_fsm_3.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_ppstg_exitcond_flatten_mid_reg_2912_pp0_iter3.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_ppstg_exitcond_flatten_reg_2894_pp0_iter3.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_ppstg_exitcond9_mid1_reg_2929_pp0_iter3.read()))) {
         newIndex3_reg_3401 = mul1_fu_2696_p2.read().range(25, 14);
     }
     if ((esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_ppstg_exitcond_flatten2_reg_2885_pp0_iter3.read()) && esl_seteq<1,1,1>(ap_const_logic_1, ap_sig_cseq_ST_pp0_stg2_fsm_4.read()) && esl_seteq<1,1,1>(ap_const_lv1_0, ap_reg_ppstg_exitcond9_mid1_reg_2929_pp0_iter3.read()))) {
